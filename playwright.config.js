@@ -19,6 +19,13 @@ export default defineConfig({
   expect: {
     timeout: 5000
   },
+
+  webServer: {
+    command: "npm start", // Adjust this if your app runs differently
+    port: 3000,
+    timeout: 60 * 1000, // Wait up to 2 minutes
+    reuseExistingServer: !process.env.CI, // Reuse server locally, restart on CI
+  },
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
