@@ -26,7 +26,7 @@ export default function Login() {
 
     return (
         <div style={{margin: "0 auto"}}>
-            <h2 style={{margin: "24px", textAlign: "center", color:'black'}}>Demo Login Form</h2>
+            <h2 style={{margin: "24px", textAlign: "center"}}>Demo Login Form</h2>
             <form onSubmit={handleLogin} style={{
                 textAlign: "left",
                 padding: "24px",
@@ -37,10 +37,10 @@ export default function Login() {
                 borderRadius: "8px"
             }}>
                 <div style={{"marginBottom": "16px"}}>
-                    <label style={{"display": "block", padding: "8px 0", color:'black'}}>Email</label>
+                    <label style={{"display": "block", padding: "8px 0"}}>Email</label>
                     <input
                         style={{"width": "100%", padding: "8px"}}
-                        id="email-input1"
+                        id="email-input"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -48,7 +48,7 @@ export default function Login() {
                     />
                 </div>
                 <div style={{"marginBottom": "16px"}}>
-                    <label style={{display: "block", padding: "8px 0", color:'black'}}>Password</label>
+                    <label style={{display: "block", padding: "8px 0"}}>Password</label>
                     <input
                         id="password-input"
                         style={{"width": "100%", padding: "8px"}}
