@@ -21,9 +21,9 @@ export default defineConfig({
   },
 
   webServer: {
-    command: "npm start", // Adjust this if your app runs differently
+    command: "npx run dev", 
     port: 3000,
-    timeout: 60 * 1000, // Wait up to 2 minutes
+    timeout: 60 * 1000, 
     reuseExistingServer: !process.env.CI, // Reuse server locally, restart on CI
   },
   /* Run tests in files in parallel */
