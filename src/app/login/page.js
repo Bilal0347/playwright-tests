@@ -40,7 +40,7 @@ export default function Login() {
                     <label style={{"display": "block", padding: "8px 0", color:'black'}}>Email</label>
                     <input
                         style={{"width": "100%", padding: "8px"}}
-                        id="email-input"
+                        id="email-input1"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
