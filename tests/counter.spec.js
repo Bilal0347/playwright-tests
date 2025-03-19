@@ -32,6 +32,7 @@ test.describe("Counter Functionality", () => {
 
   test("Reset button resets the counter", async () => {
 
+    await incrementBtn.click();
     await incrementBtn.click(); // Set counter to 1
     await resetBtn.click();
     await expect(counter).toHaveText("0");
