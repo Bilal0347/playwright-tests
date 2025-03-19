@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("Test For Logout", async ({ page, baseURL }) => {
   await page.goto(baseURL);
-  await page.waitForURL("/");
+  await page.waitForLoadState('load');
   await expect(page.locator("h1")).toHaveText("Home");
 
   const logoutBtn = page.locator('button:has-text("Logout")');

@@ -6,9 +6,10 @@ test.describe("Counter Functionality", () => {
   let decrementBtn;
   let resetBtn;
   let counter;
-
+ 
   test.beforeEach(async ({ page, baseURL }) => {
     await page.goto(baseURL);
+    await page.waitForLoadState('load');
     await expect(page.locator("h2")).toHaveText("Counter");
 
     incrementBtn = page.getByRole("button", { name: "+" });
