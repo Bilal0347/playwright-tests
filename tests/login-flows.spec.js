@@ -9,6 +9,7 @@ test.describe("Login Flow", () => {
     await loginUtil(page, 'test@maddox123.ai', 'supersecure')
 
     await page.waitForLoadState('load');
+    await page.waitForSelector('h1'); 
     await expect(page.locator('h1')).toHaveText("Home");
   });
 
@@ -18,6 +19,7 @@ test.describe("Login Flow", () => {
     await loginUtil(page,  "test@maddox456.ai", "super");
 
     await page.waitForLoadState('load');
+    await page.waitForSelector("p");
     const errorMessage = await page.locator("p").innerText();
     
     await expect(errorMessage).toContain(
